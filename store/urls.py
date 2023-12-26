@@ -1,9 +1,7 @@
-
 from django.contrib import admin
-from django.urls import path
-from webb.views import home,menu
+from django.urls import include, path
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', home),
-    path('menu/', menu),
-]
+        path('', include('webb.urls')),
+        path('admin/', admin.site.urls),
+    ]

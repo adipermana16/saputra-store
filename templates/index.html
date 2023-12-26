@@ -1,0 +1,67 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+     initial-scale=1.0">
+     <link rel="stylesheet" href="{%static 'index.css'%}" />
+    <title>Navbar & footer</title>
+</head>
+<body>
+    <div class="fCoutainer">
+        <nav class="navbar">
+            <div class="brand">
+                <h1 class="firstname">Adi</h1>
+                <h1 class="lastname">Permana</h1>
+            </div>
+            <ul class="navigation">
+                <li><a href="/" class="active">Beranda</a></li>
+                <li><a href="/" class="active">Saldo</a></li>
+                <li><a href="/" class="active">Riwayat</a></li>
+                <li><a href="/" class="active">Blog</a></li>
+                <li><a href="/" class="active">Profil</a></li>
+                <li><img src="{%static 'WhatsApp Image 2023-12-01 at 12.04.01_7fcfedc9.jpg'%}" alt="..."></li>
+            </ul>
+        </nav>
+    
+    <div class="header">
+        <h3>Game</h3>
+    </div>
+    <div class="content">
+        {% for game in data %}
+        <div class="card">
+            <img src="media/{{game.image}}" alt="">
+            <p>{{game.nama}}</p>
+            <button>
+                <a href="/details/{{game.nama}}">beli</button>
+            </button>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="footer">
+        <div class="footer-brand">
+            <h3 class="footer-adi">Adi</h3>
+            <h3 class="footer-permana">permana</h3>
+        </div>
+        <p>Menyediakan Topup Game Favorit Kamu Agar Main Game Semakin Seru. Pengiriman Cepat dan berbagai macam Metode Pembayaran. Layanan 24 Jam Non-stop.</p>
+        
+        <div class="sosmed">
+            <img src="assets/phone.svg" />
+            <p>081334839279</p>
+        </div>
+        <div class="sosmed">
+            <img src="assets/whatsapp.svg" alt="">
+            <p>081334839279</p>
+        </div>
+        <div class="sosmed">
+            <img src="assets/instagram.svg" alt="">
+            <p>@adiprmnasptra</p>
+        </div>
+    </div>
+    <div class="fotera">
+        <p>Copyright © 2023 by PT SAPUTRA.STORE. All Rights Reserved. - Terms and conditions - Privacy Policy</p>
+    </div>
+</div>
+</body>
+</html>

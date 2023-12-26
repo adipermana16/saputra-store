@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: black; 
+    justify-content: space-between;
+}
+.brand {
+    display: flex;
+}
+.firstname {
+    color: blue;
+    margin-left: 20px;
+    font-size:30px;
+}
+
+.lastname {
+    color: blueviolet;
+    margin-left: 8px;
+    font-size: 30px;
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.navigation a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.navigation img {
+    width: 60px;
+    height: 60px;
+}
+
+.navigation a:hover{
+    color: blue; 
+    transition: all 600ms;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+.content{
+    padding-top: 100px;
+    padding-left: 40px;
+    display: grid;
+    /* gap: 15px; */
+    /* padding-top: 100px; */
+    color: white;
+    grid-template-columns: 250px 250px 250px 250px 250px;
+    /* grid-template-rows: 150px 150px 150px; */
+    justify-content: center;
+}
+.content img {
+    display: flex;
+    bottom: 0;
+    width: 165px;
+    border-radius: 10px;
+}
+.content .card {
+    /* background:  rgb(0, 191, 225); */
+    width: max-content;
+    height: max-content;
+    border-radius: 10px 0px;
+
+}
+.content .card p{
+    text-align: center;
+    text-transform: capitalize;
+
+}
+
+.content .card button {
+    color: white;
+    width: 100%;
+    background-color: rgb(0, 191, 225);
+    text-transform: capitalize;
+    border: 0px;
+    border-radius: 5px;
+}
+
+.footer {
+    height: 100px;
+    background-color: black;
+    bottom: 0;
+    display: sticky;
+    border-radius: 0;
+    color: wheat;
+}
+
+.fCoutainer {
+    height: 100vh;
+    bottom: 0;
+    display: sticky;
+
+}
+
+.sosmed {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-brand {
+    display: flex;
+    gap: 10px;
+}
+
+.fotera {
+    background-color: black;
+    text-align: center;
+    color: wheat;
+    background-size: cover;
+}
+
+.footer-adi {
+    color: blue;
+    font-weight: bold;
+}
+
+.footer-permana {
+    color: blueviolet;
+    font-weight: bold;
+}
+.content {
+    width: 96,5%;
+    height: 90%;
+    background-color: #222831;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -1,0 +1,172 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'detail.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand">
+            <h1 class="firstname">Adi</h1>
+            <h1 class="lastname">Permana</h1>
+        </div>
+        <ul class="navigation">
+            <li><a href="/" class="active">Beranda</a></li>
+            <li><a href="/" class="active">Saldo</a></li>
+            <li><a href="/" class="active">Riwayat</a></li>
+            <li><a href="/" class="active">Blog</a></li>
+            <li><a href="/" class="active">Profil</a></li>
+            <li><img src="{% static 'WhatsApp Image 2023-12-01 at 12.04.01_7fcfedc9.jpg' %}" alt="..."></li>
+        </ul>
+    </nav>
+
+<div class="content">
+    <div class="card">
+        <img src="/media/{{image}}">
+        <h1>{{name}}</h1>
+        <ul class="text">
+                <li>
+                masukan
+                <strong>User ID</strong>
+                dan
+                <strong>Zona ID</strong>
+                Anda, Contoh : 150620332 (2758)
+                </li>
+                <li>
+                Pilih Nominal Diamond yang kamu inginkan
+                    </li>
+                    <li>
+                        Pilih Metode Pembayaran ( all payemnt seperti ewallet ada di Bank Transfer )
+                    </li>
+                    <li>
+                        Masukan No. Whatsapp Anda agar mendapatkan notifikasi
+                    </li>
+                    <li>
+                        Klik Beli Sekarang dan Selesaikan Pembayaran
+                    </li>
+                    <li>
+                        Tunggu Proses 1-2 Menit (event max 2jam) , Pesanan Anda akan Masuk Secara Otomatis
+                    </li>
+        </ul>
+    </div>
+    <div class="detail-produk">
+    <div class="bat">
+        <h2>lengkapi data</h2>
+        <div class="data">
+            <div class="input-id">
+                <label>user id</label>
+                <input type="number" name="user id" id="user id" class="from-control" placeholder="Masukkan user ID">
+            </div>
+            <div class="input-id">
+                <label>zona id</label>
+                <input type="number" name="user id" id="user id" class="from-control" placeholder="Masukkan zona ID">
+            </div>
+        </div>
+        <button class="btn"><label >bantuan</label></button>
+    </div>
+        <div class="list">
+            <p>pilih nominal</p>
+            <div class="produk-list">
+
+                {% for nominal in nominals %}
+                <div class="produk">
+                    <h3>{{nominal.item}}</h3>
+                    <h5>Rp.{{nominal.nominal}}</h5>
+                </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+        <div class="list">
+            <p>kode voucher</p>
+            <input type="text" placeholder="Masukkan Voucher"> 
+        </div>
+        <div class="list">
+            <p>metode Pembayaran</p>
+            <div class="atas">
+                <h3> <span><ion-icon name="card-outline"></ion-icon></span>  Bank Transfer</h3>
+                <div class="gambar">
+                    <img src="{% static 'img/dana.png' %}" alt="">
+                </div>
+                <div class="stn">
+                   <li>Ewallet Dana</li>
+                   <li>Dicek Otomatis</li>
+                </div>
+                <div class="gambar">
+                    <img src="{% static 'img/BCA_logo_Bank_Central_Asia.png' %}" alt="">
+                </div>
+                <div class="stn">
+                    <li>Ewallet Dana</li>
+                    <li>Dicek Otomatis</li>
+                 </div>
+                <div class="gambar">
+                    <img src="{% static 'img/Logo-Ovo-Png.png' %} " alt="">
+                </div>
+                <div class="stn">
+                    <li>Ewallet Dana</li>
+                    <li>Dicek Otomatis</li>
+                 </div>
+                 <h3> <span><ion-icon name="card-outline"></ion-icon></span> Virtual Acount</h3>
+                 <div class="gambar">
+                    <!-- <img src="img/dana.png" alt=""> -->
+                </div>
+                <div class="stn">
+                   <!-- <li>Ewallet Dana</li> -->
+                   <!-- <li>Dicek Otomatis</li> -->
+                </div>
+                 <h3> <span><ion-icon name="card-outline"></ion-icon></span> Convenience Store</h3>
+                 <div class="gambar">
+                    <!-- <img src="img/dana.png" alt=""> -->
+                </div>
+                <div class="stn">
+                   <!-- <li>Ewallet Dana</li> -->
+                   <!-- <li>Dicek Otomatis</li> -->
+                </div>
+                 <h3> <span><ion-icon name="card-outline"></ion-icon></span> E-Wallet</h3>
+                 <div class="gambar">
+                    <!-- <img src="img/dana.png" alt=""> -->
+                </div>
+                <div class="stn">
+                   <!-- <li>Ewallet Dana</li> -->
+                   <!-- <li>Dicek Otomatis</li> -->
+                </div>
+                </div>
+        </div>
+        <div class="list">
+            <p>Konfirmasi Pesanan</p>
+            <input type="text" placeholder="Masukkan Nomer Whatsapp | Ex 08xxxxxxxx"> 
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="footer-brand">
+                <h3 class="footer-adi">Adi</h3>
+                <h3 class="footer-permana">permana</h3>
+            </div>
+            <p>Menyediakan Topup Game Favorit Kamu Agar Main Game Semakin Seru. Pengiriman Cepat dan berbagai macam Metode Pembayaran. Layanan 24 Jam Non-stop.</p> 
+            <div class="sosmed">
+                <img src="img/phone.svg" />
+                <p>081334839279</p>
+            </div>
+            <div class="sosmed">
+                <img src="img/whatsapp.svg" alt="">
+                <p>081334839279</p>
+            </div>
+            <div class="sosmed">
+                <img src="img/instagram.svg" alt="">
+                <p>@adiprmnasptra</p>
+            </div>
+            <div class="fotera">
+                <p>Copyright © 2023 by PT SAPUTRA.STORE. All Rights Reserved. - Terms and conditions - Privacy Policy</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<!-- icone -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>
