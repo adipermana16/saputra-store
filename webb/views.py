@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
-from .models import Game,Menu
+from .models import *
 
 # Create your views here.
  
@@ -28,17 +28,12 @@ def detail(request, **kwargs):
      
 
 def joki(request, **kwargs):
-     print(kwargs['id'])
-     game = Game.objets.filter(nama=kwargs["id"])
-
-     print(nominals)
+     game = Joki.objects.all()
 
      if game:
           context = {
-               "name" : str(game[0]),
-               "image" : game[0].image,
-               "nominals" : nominals
+               "data" : game
           }
 
-          return render(request,'joki.html', context)
+     return render(request,'joki.html', context)
      

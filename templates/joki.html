@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,42 +95,14 @@
             <h3>Top Up</h3>
           </div>
           <div class="border-order">
+
+            {% for paket in data %}
             <div class="card">
-              <h3>Master / Bintang</h3>
-              <p>Rp. 4.000</p>
+              <h3>{{paket.paket}}</h3>
+              <p>Rp. {{paket.nominal}}</p>
             </div>
-            <div class="card">
-              <h3>GM / Bintang</h3>
-              <p>Rp. 5.000</p>
-            </div>
-            <div class="card">
-              <h3>Epic / Bintang</h3>
-              <p>Rp. 7.000</p>
-            </div>
-            <div class="card">
-              <h3>Legend / Bintang</h3>
-              <p>Rp. 9.000</p>
-            </div>
-            <div class="card">
-              <h3>Mytic placement (Grading)</h3>
-              <p>Rp. 20.000</p>
-            </div>
-            <div class="card">
-              <h3>Mytic 1-25 / bintang</h3>
-              <p>Rp. 20.000</p>
-            </div>
-            <div class="card">
-              <h3>Mytical Honor 25-50 / bintang</h3>
-              <p>Rp. 20.000</p>
-            </div>
-            <div class="card">
-              <h3>Mytical Glory 50-100 / bintang</h3>
-              <p>Rp. 20.000</p>
-            </div>
-            <div class="card">
-              <h3>Mytic Immortal / bintang</h3>
-              <p>Rp. 20.000</p>
-            </div>
+            {% endfor %}
+
           </div>
         </div>
         <!-- ini bagian jumlah bintang yang dipesan -->
