@@ -25,3 +25,20 @@ def detail(request, **kwargs):
           }
           
           return render(request,'detail.html', context)
+     
+
+def joki(request, **kwargs):
+     print(kwargs['id'])
+     game = Game.objets.filter(nama=kwargs["id"])
+
+     print(nominals)
+
+     if game:
+          context = {
+               "name" : str(game[0]),
+               "image" : game[0].image,
+               "nominals" : nominals
+          }
+
+          return render(request,'joki.html', context)
+     
